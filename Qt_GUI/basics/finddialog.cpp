@@ -43,8 +43,6 @@ FindDialog::FindDialog(QWidget *parent) : QDialog(parent)
 
     setWindowTitle(tr("Find"));
     setFixedHeight(sizeHint().height());
-
-
 }
 
 void FindDialog::findClicked()
