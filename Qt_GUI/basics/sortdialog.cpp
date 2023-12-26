@@ -17,17 +17,17 @@ SortDialog::SortDialog(QWidget* parent)
 void SortDialog::setColumnRange(QChar first, QChar last)
 {
     primaryColumnCombo->clear();
-    comboBox_2->clear();
+    secondaryColumnCombo->clear();
     tertiaryColumnCombo->clear();
 
-    comboBox_2->addItem(tr("None"));
+    secondaryColumnCombo->addItem(tr("None"));
     tertiaryColumnCombo->addItem(tr("None"));
-    primaryColumnCombo->setMinimumSize(comboBox_2->sizeHint());
+    primaryColumnCombo->setMinimumSize(secondaryColumnCombo->sizeHint());
 
     QChar ch = first;
     while (ch <= last) {
         primaryColumnCombo->addItem(QString(ch));
-        comboBox_2->addItem(QString(ch));
+        secondaryColumnCombo->addItem(QString(ch));
         tertiaryColumnCombo->addItem(QString(ch));
         ch = static_cast<QChar>(ch.unicode() +1);
     }
